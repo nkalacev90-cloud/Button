@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кнопка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <main id="mainScreen" class="screen active">
+    <button id="clickBtn" type="button" aria-label="Нажми меня"></button>
+    <p id="counter" aria-live="polite" aria-atomic="true">
+      Кликов: <span id="countValue">0</span>
+    </p>
+  </main>
+
+
+  <main id="introScreen" class="screen">
+    <h2 id="introTitle">Название игры</h2>
+    <p id="introDesc" class="game-desc">Описание</p>
+    <p class="intro-hint">Нажмите Пробел, Enter или кликните, чтобы начать</p>
+  </main>
+
+  <main id="gameScreen" class="screen">
+    <div class="game-container">
+      <h2 id="gameTitle">Игра</h2>
+      <p id="gameDesc" class="game-desc">Описание</p>
+      
+      <button id="gameActionBtn" type="button" class="game-circle-btn"></button>
+      
+      <div id="flappyContainer" style="display: none; flex-direction: column; align-items: center;">
+        <canvas id="flappyCanvas" width="300" height="400"></canvas>
+      </div>
+
+      <p id="gameStatus" class="game-status"></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
